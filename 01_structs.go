@@ -10,8 +10,7 @@ type Pair struct{ X, Y float64 } //declares a new type Pair, which is a struct (
 func main() {
 	var pair1 Pair      //declares a variable pair1 of type Pair (since no value is give, it gets the zero value for a Pair {0,0}.
 	pair1 = Pair{3, 4}  //assigns a new Pair value to pair1
-	pair2 := Pair{1, 2} //:= operator is Go's short variable declaration.
-	//It declares and initializes a variable in one step.
+	pair2 := Pair{1, 2} //:= operator is Go's short variable declaration. It declares and initializes a variable in one step.
 
 	var result = pair1.Abs() + pair2.Abs()
 	fmt.Println(result)
