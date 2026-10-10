@@ -17,8 +17,8 @@ func main() {
 	fmt.Println("DONE!")
 }
 
-func worker(id int, lock chan bool, group *sync.WaitGroup) {
-	defer group.Done()
+func worker(id int, lock chan bool, wg *sync.WaitGroup) {
+	defer wg.Done()
 	fmt.Printf("Worker %d wants the lock \n", id)
 	lock <- true //a worker sends a value into the lock channel if the channel is currently empty, else the send blocks.
 
